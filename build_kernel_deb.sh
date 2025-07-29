@@ -10,7 +10,8 @@ else
     exit 1
 fi
 
-set revision=git rev-parse --abbrev-ref HEAD | grep -oP '(?<=wip/).*'
+echo "Applying patches..."
+git apply ../patches/$(git rev-parse --abbrev-ref HEAD)/*.patch || { echo "Failed to apply patches"; exit 1; }
 
 # Create config
 if [ ! -f .config ]; then
