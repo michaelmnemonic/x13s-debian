@@ -11,6 +11,8 @@
     devShells.x86_64-linux.default = pkgs.mkShell {
       packages = with pkgs; [
         stdenv
+        flex
+        bison
         alejandra
         nil
         yamlfmt
