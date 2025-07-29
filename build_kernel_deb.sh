@@ -21,7 +21,7 @@ git apply ../patches/*.patch || { echo "Failed to apply patches"; exit 1; }
 # fi
 
 echo "Configuring kernel..."
-cp ../config .config
+cp ../config/.config .config
 
 # Compile the kernel
 echo "Compiling kernel..."
