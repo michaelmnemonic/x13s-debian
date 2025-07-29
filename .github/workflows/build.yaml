@@ -20,7 +20,7 @@ jobs:
         run: |
           ./build_kernel_deb.sh
 
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v4
         with:
           name: kernel
           path: ${{ github.workspace }}/*.deb
