@@ -14,11 +14,14 @@ echo "Applying patches..."
 git apply ../patches/*.patch || { echo "Failed to apply patches"; exit 1; }
 
 # Create config
-if [ ! -f .config ]; then
-    make johan_defconfig || { echo "Failed to create config"; exit 1; }
-else
-    echo "Config already exists. This script assumes an unconfigured kernel."
-fi
+# if [ ! -f .config ]; then
+#     make johan_defconfig || { echo "Failed to create config"; exit 1; }
+# else
+#     echo "Config already exists. This script assumes an unconfigured kernel."
+# fi
+
+echo "Configuring kernel..."
+cp ../config .config
 
 # Compile the kernel
 echo "Compiling kernel..."
