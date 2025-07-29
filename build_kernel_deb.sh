@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # Build Debian package for Linux kernel in the 'linux/' subdirectory
 
