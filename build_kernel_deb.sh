@@ -11,7 +11,7 @@ else
 fi
 
 echo "Applying patches..."
-git apply ../patches/$(git rev-parse --abbrev-ref HEAD)/*.patch || { echo "Failed to apply patches"; exit 1; }
+git apply ../patches/*.patch || { echo "Failed to apply patches"; exit 1; }
 
 # Create config
 if [ ! -f .config ]; then
